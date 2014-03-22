@@ -1,7 +1,7 @@
 #TeuxDeux Unofficial API
 ### For Python. Works with Neux (Feb 2013 update).
 
-Since there are no news on [TeuxDeux API](https://github.com/teuxdeux/teuxdeux-api) for a long time, and developers do not reply, here's quick'n'dirty hack with most basic functions: authentication, post and list todos. Can be simply extended if other features are required.
+Since there are no news on [TeuxDeux API](https://github.com/teuxdeux/teuxdeux-api) for a long time and developers prefer not to reply, here's quick'n'dirty hack with most basic functionality: authentication, post and list todos. Can be easily extended if other features are required.
 
 ##Requirements:
 
@@ -18,5 +18,5 @@ Since there are no news on [TeuxDeux API](https://github.com/teuxdeux/teuxdeux-a
     td.create("todo today")
     td.create("todo tomorrow", tomorrow)
 
-    for td in td.list(end = tomorrow):
-      print td['text']
+    for todo in td.list(end = tomorrow):
+      print todo['text']
