@@ -1,6 +1,7 @@
 #TeuxDeux Unofficial API
+### For Python. Works with Neux (Feb 2013 update).
 
-Since there are no news on [TeuxDeux API](https://github.com/teuxdeux/teuxdeux-api), here's quick'n'dirty hack with most basic functions: authentication, post and list todos. Can be simply extended if other features are required.
+Since there are no news on [TeuxDeux API](https://github.com/teuxdeux/teuxdeux-api) for a long time, and developers do not reply, here's quick'n'dirty hack with most basic functions: authentication, post and list todos. Can be simply extended if other features are required.
 
 ##Requirements:
 
@@ -12,7 +13,7 @@ Since there are no news on [TeuxDeux API](https://github.com/teuxdeux/teuxdeux-a
   
     tomorrow = date.today() + timedelta(days=1)  
 
-    td=TeuxDeux("username","password")
+    td = TeuxDeux("username","password")
 
     td.create("todo today")
     td.create("todo tomorrow", tomorrow)
