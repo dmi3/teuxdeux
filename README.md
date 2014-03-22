@@ -7,9 +7,15 @@ Since there are no news on [TeuxDeux API](https://github.com/teuxdeux/teuxdeux-a
 * [Requests](http://docs.python-requests.org/en/latest/user/install/#install) `pip install requests`
 
 ##Usage:
-
+    from datetime import date,timedelta
     from TeuxDeux import TeuxDeux
   
-    td=TeuxDeux("login","password")
-    print(td.list_todos("2014-03-16","2014-03-30"))
-    td.create_todo("The ToDo","2014-03-22") 
+    tomorrow = date.today() + timedelta(days=1)  
+
+    td=TeuxDeux("username","password")
+
+    td.create("todo today")
+    td.create("todo tomorrow", tomorrow)
+
+    for td in td.list(end = tomorrow):
+      print td['text']
